@@ -1,0 +1,65 @@
+:root {
+  --one: #ffffff;
+  --two: #3e3f41;
+  --three: #eeeeee;
+  --four: #000000;
+  --five: #222222;
+  --six: #007bff;
+  --seven: #6c757d;
+  --eigth: #e2e2e2;
+  --nine: #54707b;
+  --font: Roboto, sans, sans-serif, Arial, Calibri, Helvetica, Verdana, Courier,
+    Georgia, Palatino, Times New Roman;
+}
+.Email {
+  min-width: 320px;
+  width: 100%;
+  background-color: var(--three);
+  padding: 15px 0px;
+  margin: 3px 0px;
+}
+.Email__content {
+}
+.Email__content__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.Email__content__form__label--one {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.Email__content__form__label--two {
+  font-weight: lighter;
+  margin: 10px 0px;
+  text-align: center;
+}
+.Email__content__form__div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Email__content__form__div input {
+  color: var(--seven);
+  cursor: pointer;
+  font-size: 17px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 0;
+  outline: none;
+}
+.Email__content__form__div button {
+  background-color: var(--two);
+  border: none;
+  outline: none;
+  color: var(--one);
+  padding: 4px 6px 0px 6px;
+  margin: 0px 10px;
+  font-size: 1.8rem;
+  transition: 1s all;
+  cursor: pointer;
+}
+.Email__content__form__div button:hover {
+  background-color: var(--five);
+}

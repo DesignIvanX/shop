@@ -1,0 +1,50 @@
+:root {
+  --one: #ffffff;
+  --two: #3e3f41;
+  --three: #eeeeee;
+  --four: #000000;
+  --five: #222222;
+  --six: #007bff;
+  --seven: #6c757d;
+  --eigth: #e2e2e2;
+  --nine: #54707b;
+  --font: Roboto, sans, sans-serif, Arial, Calibri, Helvetica, Verdana, Courier,
+    Georgia, Palatino, Times New Roman;
+}
+.Benefit {
+  min-width: 320px;
+  width: 100%;
+  background-color: var(--three);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.Benefit__one,
+.Benefit__two,
+.Benefit__three {
+  text-align: center;
+  margin: 5px 5px;
+}
+.Benefit__one--h2,
+.Benefit__two--h2,
+.Benefit__three--h2 {
+  color: var(--four);
+  font-weight: bold;
+  font-size: 1rem;
+}
+.Benefit__one--h2--icon,
+.Benefit__two--h2--icon,
+.Benefit__three--h2--icon {
+  font-size: 2rem;
+  margin-bottom: -10px;
+  margin-right: 5px;
+}
+.Benefit__one--h3,
+.Benefit__two--h3,
+.Benefit__three--h3 {
+  color: var(--four);
+  font-weight: lighter;
+  font-size: 0.9rem;
+  margin-top: -10px;
+}

@@ -1,0 +1,39 @@
+:root {
+  --one: #ffffff;
+  --two: #3e3f41;
+  --three: #eeeeee;
+  --four: #000000;
+  --five: #222222;
+  --six: #007bff;
+  --seven: #6c757d;
+  --eigth: #e2e2e2;
+  --nine: #54707b;
+  --ten: #ffd814;
+  --eleven: #fcd200;
+  --twelve: #eef6f6;
+  --thirteen: #363636;
+  --fourteen: #797979;
+  --font: Roboto, sans, sans-serif, Arial, Calibri, Helvetica, Verdana, Courier,
+    Georgia, Palatino, Times New Roman;
+  --shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+}
+
+.Products {
+  min-width: 320px;
+  width: 100%;
+  padding: 20px 10px;
+  background-color: var(--twelve);
+}
+.Products__title--a {
+  width: 100%;
+  color: var(--thirteen);
+  text-align: center;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: 1s all ease;
+}
+.Products__title--a:hover {
+  color: var(--fourteen);
+}
+.Products__content {
+}

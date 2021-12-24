@@ -1,0 +1,42 @@
+:root {
+  --one: #ffffff;
+  --two: #3e3f41;
+  --three: #eeeeee;
+  --four: #000000;
+  --five: #222222;
+  --six: #007bff;
+  --seven: #6c757d;
+  --eigth: #e2e2e2;
+  --nine: #54707b;
+  --font: Roboto, sans, sans-serif, Arial, Calibri, Helvetica, Verdana, Courier,
+    Georgia, Palatino, Times New Roman;
+}
+.Card {
+  margin: 20px 0;
+  width: 270px;
+  height: 160px;
+  border-radius: 10px;
+  transition: 1s all ease;
+}
+.Card:hover {
+  transform: scale(1.1);
+}
+.Card--a {
+  color: var(--one);
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.Card--a__img {
+  position: absolute;
+}
+.Card--a__img--img {
+  width: 270px;
+  height: 160px;
+  border-radius: 10px;
+}
+.Card--a--h3 {
+  position: absolute;
+  font-size: 2rem;
+  text-align: center;
+}

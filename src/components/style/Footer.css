@@ -1,0 +1,100 @@
+:root {
+  --one: #ffffff;
+  --two: #3e3f41;
+  --three: #eeeeee;
+  --four: #000000;
+  --five: #222222;
+  --six: #007bff;
+  --seven: #6c757d;
+  --eigth: #e2e2e2;
+  --nine: #54707b;
+  --font: Roboto, sans, sans-serif, Arial, Calibri, Helvetica, Verdana, Courier,
+    Georgia, Palatino, Times New Roman;
+}
+.Footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-width: 320px;
+  margin-top: 2px;
+}
+.Footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: var(--five);
+}
+.Footer__content__others {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.Footer__content__others div {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: 300px;
+  text-align: center;
+}
+.Footer__content__others a {
+  color: var(--one);
+  text-decoration: none;
+}
+.Footer__content__others h3 {
+  color: var(--three);
+}
+.Footer__content__payment {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.Footer__content__social {
+  display: block;
+  color: var(--one);
+  font-size: 1.9rem;
+}
+.Footer__content__social:hover {
+  color: var(--three);
+}
+.Footer__content__social a {
+  text-decoration: none;
+  color: var(--one);
+  transition: 1s all ease;
+}
+.Footer__content__social a:hover {
+  color: var(--six);
+}
+.Footer__content__social--icon {
+  margin: 10px 20px;
+}
+.Footer__content__payment__one,
+.Footer__content__payment__two {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--one);
+  margin: 10px;
+}
+.Footer__content__payment__one h3,
+.Footer__content__payment__two h3 {
+  margin: 0px 10px 0px 0px;
+  color: var(--three);
+  font-size: 0.9rem;
+}
+.Footer__content__payment__one--icon,
+.Footer__content__payment__two--icon {
+  font-size: 1.9rem;
+  margin: 0px 10px;
+}
+.Footer__foot {
+  padding: 20px;
+  background-color: var(--two);
+  color: var(--one);
+  text-align: center;
+}
