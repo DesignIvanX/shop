@@ -23,7 +23,7 @@ const Home = () => {
           {
             id: "1",
             name: "Dog",
-            img: "img",
+            img: bg2,
             url: "/",
             start: [1, 2, 3, 4],
             reviews: [1, 2, 3, 4, 5],

@@ -10,15 +10,20 @@
   --nine: #54707b;
   --ten: #ffd814;
   --eleven: #fcd200;
-  --font: Roboto, sans, sans-serif, Arial, Calibri, Helvetica, Verdana, Courier,
-    Georgia, Palatino, Times New Roman;
+  --twelve: #eef6f6;
+  --thirteen: #363636;
+  --fourteen: #797979;
+  --fiveteen: #444444;
+  --font: "Roboto", sans-serif;
   --shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+  --shadowTwo: 0 0 10px #cccccc;
 }
 
 .Navegation {
   position: fixed;
   top: 0;
   width: 100%;
+  box-shadow: var(--shadowTwo);
   z-index: 1000;
 }
 .Navegation__content {
@@ -30,11 +35,27 @@
 }
 .Navegation__content__menu {
 }
-.Navegation__content__menu__icon {
+.Navegation__content__menu__icon div {
+  height: 4px;
+  width: 30px;
+  border-radius: 100px;
+  background-color: var(--two);
   color: var(--two);
-  text-decoration: none;
   cursor: pointer;
-  font-size: 2rem;
+  transition: 500ms all ease;
+}
+.line2,
+.line3 {
+  margin: 4px 0 0 0;
+}
+.active .line1 {
+  transform: rotate(45deg) translateX(6px) translateY(1px);
+}
+.active .line2 {
+  display: none;
+}
+.active .line3 {
+  transform: rotate(-45deg) translateX(5px) translateY(0px);
 }
 .Navegation__content__menu__content__nav {
   position: fixed;
@@ -71,13 +92,13 @@
   font-size: 2rem;
 }
 .Navegation__content__logo a img {
-  width: 100px;
-  height: 65px;
+  width: 160px;
+  height: 90px;
+  margin: 0 0 0 -25px;
   cursor: pointer;
 }
 .Navegation__content__card__one--icon {
   color: var(--two);
-  text-decoration: none;
   cursor: pointer;
   font-size: 2rem;
 }
@@ -127,7 +148,7 @@
   border: 1px solid var(--ten) !important;
   background-color: var(--ten) !important;
   padding: 10px 20px;
-  color: var(--four);
+  color: var(--two);
   text-decoration: none;
   border-radius: 10px;
   box-shadow: var(--shadow);

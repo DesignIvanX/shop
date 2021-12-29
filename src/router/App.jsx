@@ -3,7 +3,7 @@ import { Router } from "@reach/router";
 import Canva from "../components/Canva";
 import NotFound from "../pages/NotFound";
 import Home from "../pages/Home";
-import Product from "../pages/Product";
+import Details from "../components/Details";
 import Checkout from "../pages/Checkout";
 import Information from "../pages/Information";
 import Payment from "../pages/Payment";
@@ -14,7 +14,7 @@ const App = () => {
       <Router>
         <NotFound default />
         <Home path="/" />
-        <Product path="/product/:id" />
+        <Details path="/product/:id" />
         <Checkout path="/checkout" />
         <Information path="/checkout/information" />
         <Payment path="/checkout/payment" />

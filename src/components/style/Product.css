@@ -1,0 +1,63 @@
+:root {
+  --one: #ffffff;
+  --two: #3e3f41;
+  --three: #eeeeee;
+  --four: #000000;
+  --five: #222222;
+  --six: #007bff;
+  --seven: #6c757d;
+  --eigth: #e2e2e2;
+  --nine: #54707b;
+  --ten: #ffd814;
+  --eleven: #fcd200;
+  --twelve: #eef6f6;
+  --thirteen: #363636;
+  --fourteen: #797979;
+  --fiveteen: #444444;
+  --font: "Roboto", sans-serif;
+  --shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+  --shadowTwo: 0 0 10px #cccccc;
+}
+.Product {
+  width: 150px;
+  height: 260px;
+  margin: 20px;
+}
+.Product__content {
+  position: relative;
+}
+.Product__content__img {
+  width: 130px;
+  height: 260px;
+}
+.Product__content__img--img {
+  width: 100%;
+  height: 100px;
+}
+.Product__content__text {
+  position: absolute;
+  top: 85px;
+  width: 100%;
+  color: var(--fiveteen);
+}
+.Product__content__text__name {
+}
+.Product__content__text__name--h3 {
+}
+.Product__content__text__info {
+  display: flex;
+}
+.Product__content__text__info__star {
+}
+.Product__content__text__info__star--span {
+  color: var(--ten);
+  font-size: 1rem;
+}
+.Product__content__text__info__reviews {
+}
+.Product__content__text__info__reviews--span {
+}
+.Product__content__text__cost {
+}
+.Product__content__text__cost--span {
+}

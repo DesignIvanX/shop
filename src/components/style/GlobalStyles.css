@@ -8,8 +8,15 @@
   --seven: #6c757d;
   --eigth: #e2e2e2;
   --nine: #54707b;
-  --font: Roboto, sans, sans-serif, Arial, Calibri, Helvetica, Verdana, Courier,
-    Georgia, Palatino, Times New Roman;
+  --ten: #ffd814;
+  --eleven: #fcd200;
+  --twelve: #eef6f6;
+  --thirteen: #363636;
+  --fourteen: #797979;
+  --fiveteen: #444444;
+  --font: "Roboto", sans-serif;
+  --shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+  --shadowTwo: 0 0 10px #cccccc;
 }
 body {
   margin: 0;
@@ -17,6 +24,7 @@ body {
   box-sizing: border-box;
   font-family: var(--font);
   background-color: var(--one);
+  overflow-x: hidden;
 }
 ul {
   list-style: none;

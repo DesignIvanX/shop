@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "@reach/router";
 import { HiShoppingCart } from "react-icons/hi";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { GrFormClose } from "react-icons/gr";
 import Logo from "../source/static/logo.png";
 import "./style/Navegation.css";
@@ -18,11 +17,14 @@ const Navegation = () => {
     const nav = document.querySelector(
       ".Navegation__content__menu__content__nav"
     );
+    const burger = document.querySelector(".Navegation__content__menu__icon");
     if (!nav.classList.contains("toggle")) {
       nav.classList.add("toggle");
+      burger.classList.add("active");
       return;
     }
     nav.classList.remove("toggle");
+    burger.classList.remove("active");
   };
   return (
     <div className="Navegation">
@@ -32,7 +34,9 @@ const Navegation = () => {
             className="Navegation__content__menu__icon"
             onClick={handleOnClickHamburger}
           >
-            <GiHamburgerMenu />
+            <div className="line1"></div>
+            <div className="line2"></div>
+            <div className="line3"></div>
           </div>
           <div className="Navegation__content__menu__content">
             <nav className="Navegation__content__menu__content__nav">
@@ -53,7 +57,7 @@ const Navegation = () => {
                   <Link to="/">Food for dogs</Link>
                 </li>
                 <li className="Navegation__content__menu__content__nav__ul__li">
-                  <Link to="/">Clear dog</Link>
+                  <Link to="product/Botella De Agua Portátil">Clear dog</Link>
                 </li>
               </ul>
             </nav>

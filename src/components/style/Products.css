@@ -13,23 +13,25 @@
   --twelve: #eef6f6;
   --thirteen: #363636;
   --fourteen: #797979;
-  --font: Roboto, sans, sans-serif, Arial, Calibri, Helvetica, Verdana, Courier,
-    Georgia, Palatino, Times New Roman;
+  --fiveteen: #444444;
+  --font: "Roboto", sans-serif;
   --shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+  --shadowTwo: 0 0 10px #cccccc;
 }
 
 .Products {
   min-width: 320px;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   padding: 20px 10px;
   background-color: var(--twelve);
 }
 .Products__title--a {
-  width: 100%;
+  font-size: 1.9rem;
   color: var(--thirteen);
-  text-align: center;
   cursor: pointer;
-  margin: 0 auto;
   transition: 1s all ease;
 }
 .Products__title--a:hover {
