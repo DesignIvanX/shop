@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "@reach/router";
 import { HiShoppingCart } from "react-icons/hi";
 import { GrFormClose } from "react-icons/gr";
-import Logo from "../source/static/logo.png";
+import Logo from "../source/static/merch/logo.png";
 import "./style/Navegation.css";
 const Navegation = () => {
   const handleOnClickCart = () => {

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Countdown from "../components/Countdown";
+import Rusia from "../source/static/flag/rusia.png";
+import EEUU from "../source/static/flag/eeuu.png";
 import { TiTick } from "react-icons/ti";
 import "./style/Product.css";
 const Product = ({ data }) => {
@@ -149,56 +151,35 @@ const Product = ({ data }) => {
                   />
                 </div>
               </div>
-              <div className="Product__content__details">
-                {product.productDetails.map((benefit) => {
-                  return (
-                    <div
-                      key={benefit}
-                      className="Product__content__details__content"
-                    >
-                      <div className="Product__content__details__content__benefits">
-                        <h2 className="Product__content__details__content__benefits--h2">
-                          Benefits of {product.name}
-                        </h2>
-                        <div className="Product__content__details__content__benefits__description">
-                          {/* <div>
+            </div>
+            <div className="Product__content__details">
+              {product.productDetails.map((benefit) => {
+                return (
+                  <div
+                    key={benefit}
+                    className="Product__content__details__content"
+                  >
+                    <div className="Product__content__details__content__benefits">
+                      <h2 className="Product__content__details__content__benefits--h2">
+                        Benefits of {product.name}
+                      </h2>
+                      <div className="Product__content__details__content__benefits__description">
+                        {/* <div>
                             <p>{benefit.description}</p>
                           </div> */}
-                          <div className="Product__content__details__content__benefits__description__container">
-                            <ul className="Product__content__details__content__benefits__description__container--ul">
-                              {benefit.benefits.map((benefit) => {
-                                return (
-                                  <div
-                                    className="Product__content__details__content__benefits__description__container--ul--div"
-                                    key={benefit}
-                                  >
-                                    <li>
-                                      <TiTick className="Product__content__details__content__benefits__description__container--ul--div--tick" />
-                                    </li>
-                                    <li className="Product__content__details__content__benefits__description__container--ul--div--benefit">
-                                      {benefit}
-                                    </li>
-                                  </div>
-                                );
-                              })}
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="Product__content__details__content__details">
-                        <h2 className="Product__content__details__content__details--h2">
-                          Details of {product.name}
-                        </h2>
-                        <div>
-                          <ul>
-                            {benefit.details.map((detail) => {
+                        <div className="Product__content__details__content__benefits__description__container">
+                          <ul className="Product__content__details__content__benefits__description__container--ul">
+                            {benefit.benefits.map((benefit) => {
                               return (
                                 <div
-                                  className="Product__content__details__content__details__div"
-                                  key={detail}
+                                  className="Product__content__details__content__benefits__description__container--ul--div"
+                                  key={benefit}
                                 >
-                                  <li className="Product__content__details__content__details__div--detail">
-                                    {detail}
+                                  <li>
+                                    <TiTick className="Product__content__details__content__benefits__description__container--ul--div--tick" />
+                                  </li>
+                                  <li className="Product__content__details__content__benefits__description__container--ul--div--benefit">
+                                    {benefit}
                                   </li>
                                 </div>
                               );
@@ -207,9 +188,30 @@ const Product = ({ data }) => {
                         </div>
                       </div>
                     </div>
-                  );
-                })}
-              </div>
+                    <div className="Product__content__details__content__details">
+                      <h2 className="Product__content__details__content__details--h2">
+                        Details of {product.name}
+                      </h2>
+                      <div className="Product__content__details__content__details__div">
+                        <ul className="Product__content__details__content__details__div--ul">
+                          {benefit.details.map((detail) => {
+                            return (
+                              <div
+                                className="Product__content__details__content__details__div"
+                                key={detail}
+                              >
+                                <li className="Product__content__details__content__details__div--detail">
+                                  {detail}
+                                </li>
+                              </div>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
             <div className="Product__content__video">
               <video src={product.video} controls></video>
@@ -265,6 +267,10 @@ const Product = ({ data }) => {
                     >
                       <div className="Product__content__reviews__two__content__nameystar">
                         <p className="Product__content__reviews__two__content__nameystar--p">
+                          <img
+                            src={review.flag === "rusia" ? Rusia : EEUU}
+                            alt=""
+                          />
                           {review.name}
                         </p>
                         <div className="Product__content__reviews__two__content__nameystar__star">

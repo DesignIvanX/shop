@@ -22,7 +22,6 @@
 }
 .Countdown__text h4 {
   color: var(--two);
-  margin: 5px 0;
 }
 .Countdown .Countdown__time {
   display: flex;
@@ -31,19 +30,18 @@
 .Countdown--hours,
 .Countdown--minutes,
 .Countdown--seconds {
-  margin: 0 20px 0 0;
+  margin: 0 10px 0 0;
   background-color: var(--two);
   color: var(--one);
-  width: 30px;
-  height: 30px;
-  border: 5px solid var(--seven);
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
   text-align: center;
-  line-height: 30px;
+  line-height: 50px;
 }
 .Countdown__time__div__time {
   font-size: 0.9rem;
   color: var(--two);
-
-  margin: 10px 10px 0 0;
+  margin: 0 10px 0 0;
+  text-align: center;
 }

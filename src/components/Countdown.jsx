@@ -47,7 +47,7 @@ const Countdown = ({ remainingSeconds, finalMessage }) => {
   return (
     <div className="Countdown">
       <div className="Countdown__text">
-        <h4>Free Shipping NOW!! You don't have much time left.</h4>
+        <h4>Free shipping NOW!! You don't have much time left.</h4>
       </div>
       <div className="Countdown__time">
         <div>
