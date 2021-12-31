@@ -57,7 +57,7 @@ const Navegation = () => {
                   <Link to="/">Food for dogs</Link>
                 </li>
                 <li className="Navegation__content__menu__content__nav__ul__li">
-                  <Link to="product/Botella De Agua Portátil">Clear dog</Link>
+                  <Link to="product/Portable Water Bottle">Clear dog</Link>
                 </li>
               </ul>
             </nav>
@@ -65,7 +65,7 @@ const Navegation = () => {
         </div>
         <div className="Navegation__content__logo">
           <Link to="/">
-            <img src={Logo} alt="" />
+            <img src={Logo} alt="logo de the dog merch" />
           </Link>
         </div>
         <div className="Navegation__content__card">

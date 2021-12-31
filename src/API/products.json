@@ -1,8 +1,8 @@
 {
-  "Products": [
+  "products": [
     {
       "id": 1,
-      "name": "Botella De Agua Portátil",
+      "name": "Portable Water Bottle",
       "img": [
         {
           "color": [
@@ -23,14 +23,32 @@
               "color": "pink"
             }
           ],
-          "img": {
-            "1": "https://ae01.alicdn.com/kf/Hdc241262f8694b1eb810805aa3a96f57q/Botella-de-agua-port-til-de-filtro-de-carb-n-activado-para-perros-y-gatos-bebedero.jpg_Q90.jpg",
-            "2": "https://ae01.alicdn.com/kf/Hfe994bb30f1a47358c44828eadd264da4/Botella-de-agua-port-til-de-filtro-de-carb-n-activado-para-perros-y-gatos-bebedero.jpg_Q90.jpg",
-            "3": "https://ae01.alicdn.com/kf/H6117b00228ba4bab9f220679aaa91c85F/Botella-de-agua-port-til-de-filtro-de-carb-n-activado-para-perros-y-gatos-bebedero.jpg_Q90.jpg",
-            "4": "https://ae01.alicdn.com/kf/H1722b3dea31d471b9fea250bb881aaaa5/Botella-de-agua-port-til-de-filtro-de-carb-n-activado-para-perros-y-gatos-bebedero.jpg_Q90.jpg",
-            "5": "https://ae01.alicdn.com/kf/H5171173f1fde43cdb5e30597976c9831D/Botella-de-agua-port-til-de-filtro-de-carb-n-activado-para-perros-y-gatos-bebedero.jpg_Q90.jpg",
-            "6": "https://ae01.alicdn.com/kf/Hc6823a56c8a74f82a358cd5c356ed465r/Botella-de-agua-port-til-de-filtro-de-carb-n-activado-para-perros-y-gatos-bebedero.jpg_Q90.jpg"
-          }
+          "img": [
+            {
+              "img": "https://ae01.alicdn.com/kf/Hdc241262f8694b1eb810805aa3a96f57q/Botella-de-agua-port-til-de-filtro-de-carb-n-activado-para-perros-y-gatos-bebedero.jpg_Q90.jpg",
+              "color": "1"
+            },
+            {
+              "img": "https://ae01.alicdn.com/kf/Hfe994bb30f1a47358c44828eadd264da4/Botella-de-agua-port-til-de-filtro-de-carb-n-activado-para-perros-y-gatos-bebedero.jpg_Q90.jpg",
+              "color": "2"
+            },
+            {
+              "img": "https://ae01.alicdn.com/kf/H6117b00228ba4bab9f220679aaa91c85F/Botella-de-agua-port-til-de-filtro-de-carb-n-activado-para-perros-y-gatos-bebedero.jpg_Q90.jpg",
+              "color": "3"
+            },
+            {
+              "img": "https://ae01.alicdn.com/kf/H1722b3dea31d471b9fea250bb881aaaa5/Botella-de-agua-port-til-de-filtro-de-carb-n-activado-para-perros-y-gatos-bebedero.jpg_Q90.jpg",
+              "color": "4"
+            },
+            {
+              "img": "https://ae01.alicdn.com/kf/H5171173f1fde43cdb5e30597976c9831D/Botella-de-agua-port-til-de-filtro-de-carb-n-activado-para-perros-y-gatos-bebedero.jpg_Q90.jpg",
+              "color": "5"
+            },
+            {
+              "img": "https://ae01.alicdn.com/kf/Hc6823a56c8a74f82a358cd5c356ed465r/Botella-de-agua-port-til-de-filtro-de-carb-n-activado-para-perros-y-gatos-bebedero.jpg_Q90.jpg",
+              "color": "6"
+            }
+          ]
         }
       ],
       "price": [
@@ -49,150 +67,50 @@
       ],
       "stars": [
         {
-          "score": "4.8",
+          "score": "5.0",
           "stars": [1, 2, 3, 4, 5]
         }
       ],
       "reviews": [
         {
           "name": "N***a",
-          "description": "Buena calidad",
+          "description": "Good quality.",
           "flag": "rusia",
-          "stars": [1, 2, 3, 4, 5],
+          "stars": [6, 7, 8, 9, 10],
           "img": [
             "https://ae01.alicdn.com/kf/Ud0c90f5e6bc64430b4519e3ee45b1ebbN.jpg"
           ]
         },
         {
-          "name": "N***a",
-          "description": "Buena calidad",
+          "name": "I***a",
+          "description": "Excellent material, we and the dog loved it, it was a good purchase. Came fast",
           "flag": "rusia",
-          "stars": [1, 2, 3, 4, 5],
-          "img": [
-            "https://ae01.alicdn.com/kf/Ud0c90f5e6bc64430b4519e3ee45b1ebbN.jpg"
-          ]
-        },
-        {
-          "name": "N***a",
-          "description": "Buena calidad",
-          "flag": "rusia",
-          "stars": [1, 2, 3, 4, 5],
-          "img": [
-            "https://ae01.alicdn.com/kf/Ud0c90f5e6bc64430b4519e3ee45b1ebbN.jpg"
-          ]
+          "stars": [11, 12, 13, 14, 15],
+          "img": [""]
         }
-      ],
-      "details": [
-        "Tipo de artículo: Botellas de agua",
-        "Origen: CN(Origen)",
-        "Razas de perro recomendadas: Universal",
-        "Tipo: Perros",
-        "Material: Plástico",
-        "Volume: 300ml"
-      ],
-      "description": "A prueba de fugas y bloqueo de agua: la botella de agua para perros utiliza una junta de silicona de calidad alimentaria y el diseño de la llave de bloqueo ayuda a garantizar que no haya derrames ni goteo. El diseño evita que las botellas se filtren, tanto humanos como niños pueden colocarlo en la bolsa sin preocuparse por mojarse a todas partes o desperdiciar agua, no se preocupe por mojarse su paquete de viaje. Plegable y de gran capacidad-el cuenco plegable para perros/gatos/mascotas puede contener hasta 10 oz (300ml) de agua o 1,5 tazas de comida para perros. Fácil de abrir y plegar, lo que es bueno para viajes, senderismo, camping y otras actividades en interiores o exteriores. Duradero y POTABLE: el material de la botella de agua portátil para perros es inofensivo, confiable y duradero, y está intacto incluso si la deja caer accidentalmente. Puedes poner esta botella en tu bolsillo, mochila o colgar en la mano con cuerda. Rápido y fácil de usar: el diseño de bloqueo/Apertura de una tecla permite una operación fácil con una mano, puede controlar la velocidad del agua ajustando la llave al alimentar a su perro. Sin desperdicio de agua, sin desorden, No se necesita tazón adicional. Son los mejores accesorios esenciales para perros y regalos de amor para perros pequeños, medianos y grandes. Filtro de carbón seguro-telescópico con filtro de carbón activado, eficaz para reducir los malos gustos, olores y otras partículas en el riego, ¡Seguridad para que el perro/mascota beba agua limpia y dulce en cualquier momento!",
-      "finish": [
-        "Diámetro grande 6cm, conveniente para que los perros rueden su lengua y beban agua",
-        "El filtro de carbón activado puede eliminar eficazmente las impurezas en el agua",
-        "El diseño elástico no ocupa espacio",
-        "Cerradura de llave, anillo de goma sellado, sin fugas de agua",
-        "El filtro está diseñado para absorber impurezas y cloro, es resistente a las bacterias y elimina los olores peculiares."
       ],
       "video": "https://cloud.video.taobao.com/play/u/3356479402/p/1/e/6/t/10301/246351372271.mp4",
       "inStock": "true",
-      "productDetails": []
-    },
-    {
-      "id": 2,
-      "name": "",
-      "img": [],
-      "price": [
+      "productDetails": [
         {
-          "Eur": "",
-          "Us": "",
-          "EurDiscount": "",
-          "UsDiscount": ""
+          "details": [
+            "Tipo de artículo: Botellas de agua",
+            "Origen: CN(Origen)",
+            "Razas de perro recomendadas: Universal",
+            "Tipo: Perros",
+            "Material: Plástico",
+            "Volume: 300ml"
+          ],
+          "description": "A prueba de fugas y bloqueo de agua: la botella de agua para perros utiliza una junta de silicona de calidad alimentaria y el diseño de la llave de bloqueo ayuda a garantizar que no haya derrames ni goteo. El diseño evita que las botellas se filtren, tanto humanos como niños pueden colocarlo en la bolsa sin preocuparse por mojarse a todas partes o desperdiciar agua, no se preocupe por mojarse su paquete de viaje. Plegable y de gran capacidad-el cuenco plegable para perros/gatos/mascotas puede contener hasta 10 oz (300ml) de agua o 1,5 tazas de comida para perros. Fácil de abrir y plegar, lo que es bueno para viajes, senderismo, camping y otras actividades en interiores o exteriores. Duradero y POTABLE: el material de la botella de agua portátil para perros es inofensivo, confiable y duradero, y está intacto incluso si la deja caer accidentalmente. Puedes poner esta botella en tu bolsillo, mochila o colgar en la mano con cuerda. Rápido y fácil de usar: el diseño de bloqueo/Apertura de una tecla permite una operación fácil con una mano, puede controlar la velocidad del agua ajustando la llave al alimentar a su perro. Sin desperdicio de agua, sin desorden, No se necesita tazón adicional. Son los mejores accesorios esenciales para perros y regalos de amor para perros pequeños, medianos y grandes. Filtro de carbón seguro-telescópico con filtro de carbón activado, eficaz para reducir los malos gustos, olores y otras partículas en el riego, ¡Seguridad para que el perro/mascota beba agua limpia y dulce en cualquier momento!",
+          "benefits": [
+            "Diámetro grande 6cm, conveniente para que los perros rueden su lengua y beban agua",
+            "El filtro de carbón activado puede eliminar eficazmente las impurezas en el agua",
+            "El diseño elástico no ocupa espacio",
+            "Cerradura de llave, anillo de goma sellado, sin fugas de agua",
+            "El filtro está diseñado para absorber impurezas y cloro, es resistente a las bacterias y elimina los olores peculiares."
+          ]
         }
-      ],
-      "stars": [
-        {
-          "score": "4.8",
-          "stars": []
-        }
-      ],
-      "reviews": [],
-      "description": "",
-      "inStock": "",
-      "productDetails": []
-    },
-    {
-      "id": 3,
-      "name": "",
-      "img": [],
-      "price": [
-        {
-          "Eur": "",
-          "Us": "",
-          "EurDiscount": "",
-          "UsDiscount": ""
-        }
-      ],
-      "stars": [
-        {
-          "score": "4.8",
-          "stars": []
-        }
-      ],
-      "reviews": [],
-      "description": "",
-      "inStock": "",
-      "productDetails": []
-    },
-    {
-      "id": 4,
-      "name": "",
-      "img": [],
-      "price": [
-        {
-          "Eur": "",
-          "Us": "",
-          "EurDiscount": "",
-          "UsDiscount": ""
-        }
-      ],
-      "stars": [
-        {
-          "score": "4.8",
-          "stars": []
-        }
-      ],
-      "reviews": [],
-      "description": "",
-      "inStock": "",
-      "productDetails": []
-    },
-    {
-      "id": 5,
-      "name": "",
-      "img": [],
-      "price": [
-        {
-          "Eur": "",
-          "Us": "",
-          "EurDiscount": "",
-          "UsDiscount": ""
-        }
-      ],
-      "stars": [
-        {
-          "score": "4.8",
-          "stars": []
-        }
-      ],
-      "reviews": [],
-      "description": "",
-      "inStock": "",
-      "productDetails": []
+      ]
     }
   ]
 }

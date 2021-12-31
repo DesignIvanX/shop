@@ -5,7 +5,7 @@ const Details = ({ id }) => {
   const [product, setProduct] = useState({});
   useEffect(() => {
     const data = () => {
-      const data = Products.Products.filter((item) => {
+      const data = Products.products.filter((item) => {
         return item.name.includes(id);
       });
       setProduct({ data });

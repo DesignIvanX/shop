@@ -16,8 +16,8 @@ const Footer = () => {
         <div className="Footer__content__others">
           <div className="Footer__content__others__one">
             <h3>Contact</h3>
-            <Link to="/">1 949 527 8625</Link>
-            <Link to="/">support@theautomerch.com</Link>
+            <Link to="/">+595 992 233418</Link>
+            <Link to="/">support@thedogmerch.com</Link>
             <Link to="/">Sunshine Ecommerce Technologies LLC</Link>
             <Link to="/">6 Jenner Suite 260 Irvine CA, 92618</Link>
           </div>
@@ -61,7 +61,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="Footer__foot">© Copyright 2021. All Rights Reserved</div>
+      <div className="Footer__foot">©Copyright 2022. All Rights Reserved</div>
     </div>
   );
 };

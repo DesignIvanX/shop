@@ -18,6 +18,9 @@
   --shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
   --shadowTwo: 0 0 10px #cccccc;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
@@ -25,9 +28,6 @@ body {
   font-family: var(--font);
   background-color: var(--one);
   overflow-x: hidden;
-}
-ul {
-  list-style: none;
 }
 a {
   text-decoration: none;
