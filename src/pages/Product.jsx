@@ -3,6 +3,8 @@ import Countdown from "../components/Countdown";
 import Rusia from "../source/static/flag/rusia.png";
 import EEUU from "../source/static/flag/eeuu.png";
 import { TiTick } from "react-icons/ti";
+import Faq from "../components/Faq";
+import { IoIosArrowDown } from "react-icons/io";
 import "./style/Product.css";
 const Product = ({ data }) => {
   const [quantity, setQuantity] = useState(0);
@@ -42,7 +44,7 @@ const Product = ({ data }) => {
   }, []);
   return (
     <div className="Product">
-      <div className="Product__route">
+      <div id="top" className="Product__route">
         <a href="/">Home</a> / <a href="/">Best Sellers</a>
       </div>
       {data.map((product) => {
@@ -152,67 +154,81 @@ const Product = ({ data }) => {
                 </div>
               </div>
             </div>
+            {/* DETAILS */}
             <div className="Product__content__details">
-              {product.productDetails.map((benefit) => {
+              {product.productDetails.map((productDetail) => {
                 return (
                   <div
-                    key={benefit}
-                    className="Product__content__details__content"
+                    className="Product__content__details__box"
+                    key={productDetail}
                   >
-                    <div className="Product__content__details__content__benefits">
-                      <h2 className="Product__content__details__content__benefits--h2">
-                        Benefits of {product.name}
-                      </h2>
-                      <div className="Product__content__details__content__benefits__description">
-                        {/* <div>
-                            <p>{benefit.description}</p>
-                          </div> */}
-                        <div className="Product__content__details__content__benefits__description__container">
-                          <ul className="Product__content__details__content__benefits__description__container--ul">
-                            {benefit.benefits.map((benefit) => {
-                              return (
-                                <div
-                                  className="Product__content__details__content__benefits__description__container--ul--div"
-                                  key={benefit}
-                                >
-                                  <li>
-                                    <TiTick className="Product__content__details__content__benefits__description__container--ul--div--tick" />
-                                  </li>
-                                  <li className="Product__content__details__content__benefits__description__container--ul--div--benefit">
-                                    {benefit}
-                                  </li>
-                                </div>
-                              );
-                            })}
-                          </ul>
-                        </div>
+                    <div className="Product__content__details__box__hidden">
+                      <div className="Product__content__details__box__hidden__title">
+                        <h2 className="Product__content__details__box__hidden__title--h2">
+                          Benefits of {product.name}
+                        </h2>
+                        <IoIosArrowDown className="Product__content__details__box__hidden__title--arrow" />
                       </div>
+                      {productDetail.benefits.map((benefit) => {
+                        return (
+                          <div
+                            className="Product__content__details__box__hidden__description"
+                            key={benefit}
+                          >
+                            <TiTick className="Product__content__details__box__hidden__description--tick" />
+                            <li className="Product__content__details__box__hidden__description--li">
+                              {benefit}
+                            </li>
+                          </div>
+                        );
+                      })}
                     </div>
-                    <div className="Product__content__details__content__details">
-                      <h2 className="Product__content__details__content__details--h2">
-                        Details of {product.name}
-                      </h2>
-                      <div className="Product__content__details__content__details__div">
-                        <ul className="Product__content__details__content__details__div--ul">
-                          {benefit.details.map((detail) => {
-                            return (
-                              <div
-                                className="Product__content__details__content__details__div"
-                                key={detail}
-                              >
-                                <li className="Product__content__details__content__details__div--detail">
-                                  {detail}
-                                </li>
-                              </div>
-                            );
-                          })}
-                        </ul>
+                    <div className="Product__content__details__box__hidden">
+                      <div className="Product__content__details__box__hidden__title">
+                        <h2 className="Product__content__details__box__hidden__title--h2">
+                          Details of {product.name}
+                        </h2>
+                        <IoIosArrowDown className="Product__content__details__box__hidden__title--arrow" />
                       </div>
+                      {productDetail.details.map((detail) => {
+                        return (
+                          <div
+                            className="Product__content__details__box__hidden__description"
+                            key={detail}
+                          >
+                            <TiTick className="Product__content__details__box__hidden__description--tick" />
+                            <li className="Product__content__details__box__hidden__description--li">
+                              {detail}
+                            </li>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div className="Product__content__details__box__img">
+                      {productDetail.img.map((img) => {
+                        return (
+                          <img
+                            key={img.img}
+                            className="Product__content__details__box__img--img"
+                            src={img.img}
+                            alt=""
+                          />
+                        );
+                      })}
+                    </div>
+                    <div className="Product__content__details__box__up">
+                      <a
+                        className="Product__content__details__box__up--a"
+                        href="#top"
+                      >
+                        Go up!!
+                      </a>
                     </div>
                   </div>
                 );
               })}
             </div>
+            {/*  */}
             <div className="Product__content__video">
               <video src={product.video} controls></video>
             </div>
@@ -312,6 +328,7 @@ const Product = ({ data }) => {
                 })}
               </div>
             </div>
+            <Faq data={product.faq} />
           </div>
         );
       })}

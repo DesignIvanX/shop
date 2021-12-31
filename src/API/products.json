@@ -53,15 +53,11 @@
       ],
       "price": [
         {
-          "EUR": {
-            "Eur": "€22.34",
-            "EurDiscount": "€26.81",
-            "shippingEUR": "€4.39"
-          },
           "US": {
             "Us": "$24.99",
             "UsDiscount": "$29.99",
-            "shippingUS": "$4.85"
+            "Usporcentage": "-8,3",
+            "shippingUS": "$2.00"
           }
         }
       ],
@@ -108,7 +104,58 @@
             "El diseño elástico no ocupa espacio",
             "Cerradura de llave, anillo de goma sellado, sin fugas de agua",
             "El filtro está diseñado para absorber impurezas y cloro, es resistente a las bacterias y elimina los olores peculiares."
+          ],
+          "img": [
+            {
+              "img": "https://ae01.alicdn.com/kf/H6f878f1f4b9540d08c5fc554ac09be3ce.jpg"
+            },
+            {
+              "img": "https://ae01.alicdn.com/kf/Hcf5f59d40dff42df83d3e85702ad61c7O.jpg"
+            },
+            {
+              "img": "https://ae01.alicdn.com/kf/He531f58faab84fa894c428bb64ccead69.jpg"
+            },
+            {
+              "img": "https://ae01.alicdn.com/kf/H71f1daa5f99a4d1daa07a0fd5750e46dl.jpg"
+            },
+            {
+              "img": "https://ae01.alicdn.com/kf/Hd6b42278136146bcaaf45f10512a95abF.jpg"
+            },
+            {
+              "img": "https://ae01.alicdn.com/kf/H45f813bb422643e8843c66f36fff6409e.jpg"
+            },
+            {
+              "img": "https://ae01.alicdn.com/kf/Hfd0203110a3b43caa7af0a9522357b8cs.jpg"
+            },
+            {
+              "img": "https://ae01.alicdn.com/kf/Hf0677fe7d91c4a27b63840a7addc171eT.jpg"
+            },
+            {
+              "img": "https://ae01.alicdn.com/kf/H840be1786fa84e549250ed91f01cd3d0u.jpg"
+            },
+            {
+              "img": "https://ae01.alicdn.com/kf/Hebe74a6901ea462baa77d19fe4dd3156W.jpg"
+            },
+            {
+              "img": "https://ae01.alicdn.com/kf/H1bbcf49b34b340b59f772cf33373d424d.jpg"
+            },
+            {
+              "img": "https://ae01.alicdn.com/kf/H65817c4ca98c400e94dc2d27c31e24b2c.jpg"
+            },
+            {
+              "img": "https://ae01.alicdn.com/kf/H0fd81849e4ce4e4dacc7ae6f9f7a81770.jpg"
+            }
           ]
+        }
+      ],
+      "faq": [
+        {
+          "title": "¿Why buy in our store?",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit corrupti officia quos voluptas quibusdam enim, necessitatibus sit quis? Excepturi maxime odio ducimus iste sunt eum dolorem, quia molestias eos blanditiis."
+        },
+        {
+          "title": "¿How is the shipping process?",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit corrupti officia quos voluptas quibusdam enim, necessitatibus sit quis? Excepturi maxime odio ducimus iste sunt eum dolorem, quia molestias eos blanditiis."
         }
       ]
     }
