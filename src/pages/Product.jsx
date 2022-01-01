@@ -103,6 +103,9 @@ const Product = ({ data }) => {
                     <span className="Product__content__one__text__one__price--span-discount">
                       {product.price[0].US.UsDiscount}
                     </span>
+                    <span className="Product__content__one__text__one__price--span-porcentage">
+                      {product.price[0].US.Usporcentage}
+                    </span>
                   </div>
                 </div>
                 <div className="Product__content__one__text__two">
