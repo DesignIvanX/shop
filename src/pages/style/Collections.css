@@ -20,30 +20,31 @@
 }
 .Collection__all__box {
   position: relative;
-  width: 200px;
+  width: 230px;
   height: auto;
   box-shadow: var(--shadow);
   margin: 20px 10px;
   text-align: center;
   overflow: hidden;
+  padding: 10px;
 }
 .Collection__all__box__img {
-  width: 200px;
-  height: 200px;
+  width: 230px;
+  height: 230px;
   margin: 0 auto;
   overflow: hidden;
 }
 .Collection__all__img--img {
-  width: 200px;
-  height: 200px;
+  width: 230px;
+  height: 230px;
 }
 .Collection__all__img--img--hidden {
   position: absolute;
   top: 0;
   left: 0;
   transform: scale(0);
-  width: 200px;
-  height: 200px;
+  width: 230px;
+  height: 230px;
   transition: 500ms all;
 }
 .Collection__all__box:hover .Collection__all__img--img--hidden {
