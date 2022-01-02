@@ -9,7 +9,7 @@
   color: var(--black);
 }
 .Product__route {
-  padding: 0 0 0 11px;
+  padding: 0 0 0 20px;
 }
 .Product__content {
   display: flex;
