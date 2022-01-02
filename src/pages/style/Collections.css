@@ -20,13 +20,13 @@
 }
 .Collection__all__box {
   position: relative;
-  width: 230px;
+  min-width: 230px;
   height: auto;
   box-shadow: var(--shadow);
   margin: 20px 10px;
   text-align: center;
   overflow: hidden;
-  padding: 10px;
+  padding: 0 0 20px 0;
 }
 .Collection__all__box__img {
   width: 230px;
@@ -100,13 +100,11 @@
   border-radius: 100%;
   color: var(--white);
   background-color: var(--eigth);
-  height: 50px;
-  width: 50px;
+  padding: 10px;
 }
 .Collection__all__box__porcentage--span {
   font-weight: bold;
   font-size: 0.9rem;
-  margin-top: 8px;
 }
 .Collection__all__box__porcentage--usporcentage {
   line-height: 10px;
