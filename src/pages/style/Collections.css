@@ -1,0 +1,115 @@
+.Collection {
+  min-width: 320px;
+  width: 100%;
+  margin: 125px 0 0 0;
+}
+.Collection__title {
+  margin: 0 auto;
+  text-align: center;
+}
+.Collection__title--h1 {
+  color: var(--blackDark);
+  font-size: 2rem;
+  margin: 0;
+}
+.Collection__all {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.Collection__all__box {
+  position: relative;
+  width: 200px;
+  height: 330px;
+  box-shadow: var(--shadow);
+  margin: 20px 10px;
+  text-align: center;
+  overflow: hidden;
+}
+.Collection__all__box__img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.Collection__all__img--img {
+  width: 200px;
+  height: 200px;
+}
+.Collection__all__img--img--hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  width: 200px;
+  height: 200px;
+  transition: 500ms all;
+}
+.Collection__all__box:hover .Collection__all__img--img--hidden {
+  transform: scale(1);
+}
+.Collection__all__box__text {
+  text-align: center;
+}
+.Collection__all__box__text__name {
+}
+.Collection__all__box__text__name--h2 {
+  height: 40px;
+  margin: 5px 5px 0 5px;
+  font-size: 1.2rem;
+  color: var(--blackDark);
+  font-weight: bold;
+}
+.Collection__all__box__text__reviews {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.Collection__all__box__text__reviews__stars {
+}
+.Collection__all__box__text__reviews__stars--stars {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--five);
+}
+.Collection__all__box__text__reviews__content {
+}
+.Collection__all__box__text__reviews__content--p {
+  color: var(--blackDark);
+  margin-top: 20px;
+}
+.Collection__all__box__text__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Collection__all__box__text__price--us {
+  color: var(--blackDark);
+  margin: -5px 0 0 0;
+  padding: 0;
+}
+.Collection__all__box__porcentage {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 100%;
+  color: var(--white);
+  background-color: var(--eigth);
+  height: 50px;
+  width: 50px;
+}
+.Collection__all__box__porcentage--span {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+.Collection__all__box__porcentage--usporcentage {
+  line-height: 10px;
+  padding: 3px 0 0 0;
+  font-size: 0.9rem;
+  margin: 0;
+}

@@ -14,9 +14,31 @@
   --thirteen: #363636;
   --fourteen: #797979;
   --fiveteen: #444444;
+  --sixteen: #ff4747;
+  --seventeen: #fff1f1;
   --font: "Roboto", sans-serif;
+  --fontTwo: "Quicksand", sans-serif;
   --shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
   --shadowTwo: 0 0 10px #cccccc;
+}
+:root {
+  --one: #ffafaf;
+  --two: #fffcdc;
+  --three: #ffebcc;
+  --four: #ff9999;
+  --five: #ffda77;
+  --six: #fff9b6;
+  --seven: #cdf2ca;
+  --eigth: #ff4646;
+  --nine: #321863;
+  --black: #565656;
+  --blackDark: #000000;
+  --white: #ffffff;
+  --font: "Roboto", sans-serif;
+  --fontTwo: "Quicksand", sans-serif;
+  --shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+  --shadowTwo: 0 0 10px #cccccc;
+  --shadowColor: 0 0 10px #ffafaf;
 }
 html {
   scroll-behavior: smooth;
@@ -25,10 +47,19 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font);
-  background-color: var(--one);
+  font-family: var(--fontTwo);
+  background-color: var(--white);
   overflow-x: hidden;
 }
 a {
   text-decoration: none;
+}
+hr {
+  clear: both;
+  border-top: 2px solid var(--four);
+  border-top-width: medium;
+  border-width: 2px 0 0;
+  height: 0;
+  max-width: 90px;
+  margin: 10px auto;
 }

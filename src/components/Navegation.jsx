@@ -42,19 +42,21 @@ const Navegation = () => {
             <nav className="Navegation__content__menu__content__nav">
               <ul className="Navegation__content__menu__content__nav__ul">
                 <li className="Navegation__content__menu__content__nav__ul__li">
-                  <Link to="/">SHOP</Link>
+                  <Link to="/collections/all">SHOP</Link>
                 </li>
                 <li className="Navegation__content__menu__content__nav__ul__li">
                   <Link to="/">Best sellers</Link>
                 </li>
                 <li className="Navegation__content__menu__content__nav__ul__li">
-                  <Link to="/">Dog supplies</Link>
+                  <Link to="product/Scalibor Antiparasitic Collar">
+                    Dog supplies
+                  </Link>
                 </li>
                 <li className="Navegation__content__menu__content__nav__ul__li">
-                  <Link to="/">Dog accessories</Link>
+                  <Link to="product/Dog Craft">Dog accessories</Link>
                 </li>
                 <li className="Navegation__content__menu__content__nav__ul__li">
-                  <Link to="/">Food for dogs</Link>
+                  <Link to="product/Mini GPS Dogs">Food for dogs</Link>
                 </li>
                 <li className="Navegation__content__menu__content__nav__ul__li">
                   <Link to="product/Portable Water Bottle">Clear dog</Link>

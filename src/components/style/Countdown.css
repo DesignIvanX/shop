@@ -1,27 +1,7 @@
-:root {
-  --one: #ffffff;
-  --two: #3e3f41;
-  --three: #eeeeee;
-  --four: #000000;
-  --five: #222222;
-  --six: #007bff;
-  --seven: #6c757d;
-  --eigth: #e2e2e2;
-  --nine: #54707b;
-  --ten: #ffd814;
-  --eleven: #fcd200;
-  --twelve: #eef6f6;
-  --thirteen: #363636;
-  --fourteen: #797979;
-  --fiveteen: #444444;
-  --font: "Roboto", sans-serif;
-  --shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
-  --shadowTwo: 0 0 10px #cccccc;
-}
 .Countdown {
 }
 .Countdown__text h4 {
-  color: var(--two);
+  color: var(--blackDark);
 }
 .Countdown .Countdown__time {
   display: flex;
@@ -31,8 +11,8 @@
 .Countdown--minutes,
 .Countdown--seconds {
   margin: 0 10px 0 0;
-  background-color: var(--two);
-  color: var(--one);
+  background-color: var(--four);
+  color: var(--white);
   width: 50px;
   height: 50px;
   border-radius: 100%;
@@ -41,7 +21,7 @@
 }
 .Countdown__time__div__time {
   font-size: 0.9rem;
-  color: var(--two);
-  margin: 0 10px 0 0;
+  color: var(--blackDark);
+  margin: 15px 10px 0 0;
   text-align: center;
 }

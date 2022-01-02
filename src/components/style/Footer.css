@@ -1,30 +1,9 @@
-:root {
-  --one: #ffffff;
-  --two: #3e3f41;
-  --three: #eeeeee;
-  --four: #000000;
-  --five: #222222;
-  --six: #007bff;
-  --seven: #6c757d;
-  --eigth: #e2e2e2;
-  --nine: #54707b;
-  --ten: #ffd814;
-  --eleven: #fcd200;
-  --twelve: #eef6f6;
-  --thirteen: #363636;
-  --fourteen: #797979;
-  --fiveteen: #444444;
-  --font: "Roboto", sans-serif;
-  --shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
-  --shadowTwo: 0 0 10px #cccccc;
-}
 .Footer {
   position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
   min-width: 320px;
-  margin-top: 2px;
 }
 .Footer__content {
   display: flex;
@@ -32,7 +11,7 @@
   justify-content: space-evenly;
   flex-direction: column;
   flex-wrap: wrap;
-  background-color: var(--five);
+  background-color: var(--blackDark);
 }
 .Footer__content__others {
   display: flex;
@@ -41,18 +20,18 @@
   flex-wrap: wrap;
 }
 .Footer__content__others div {
+  width: 300px;
   display: flex;
   flex-direction: column;
   margin: 10px;
-  width: 300px;
   text-align: center;
 }
 .Footer__content__others a {
-  color: var(--one);
+  color: var(--white);
   text-decoration: none;
 }
 .Footer__content__others h3 {
-  color: var(--three);
+  color: var(--white);
 }
 .Footer__content__payment {
   display: flex;
@@ -62,7 +41,6 @@
 }
 .Footer__content__social {
   display: block;
-  color: var(--one);
   font-size: 1.9rem;
 }
 .Footer__content__social:hover {
@@ -70,8 +48,8 @@
 }
 .Footer__content__social a {
   text-decoration: none;
-  color: var(--one);
   transition: 1s all ease;
+  color: var(--white);
 }
 .Footer__content__social a:hover {
   color: var(--six);
@@ -85,23 +63,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--one);
   margin: 10px;
 }
 .Footer__content__payment__one h3,
 .Footer__content__payment__two h3 {
   margin: 0px 10px 0px 0px;
-  color: var(--three);
   font-size: 0.9rem;
+  color: var(--white);
 }
 .Footer__content__payment__one--icon,
 .Footer__content__payment__two--icon {
   font-size: 1.9rem;
   margin: 0px 10px;
+  color: var(--white);
 }
 .Footer__foot {
   padding: 20px;
-  background-color: var(--two);
-  color: var(--one);
+  background-color: var(--four);
   text-align: center;
+  color: var(--white);
 }

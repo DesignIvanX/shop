@@ -21,8 +21,8 @@
   align-items: center;
   justify-content: space-evenly;
   padding: 10px;
-  background-color: var(--two);
-  color: var(--one);
+  background-color: var(--four);
+  color: var(--white);
 }
 .Faq__content__title--h2 {
   font-size: 1rem;
@@ -34,5 +34,5 @@
 }
 .Faq__content__description--p {
   font-size: 0.9rem;
-  color: var(--two);
+  color: var(--blackDark);
 }

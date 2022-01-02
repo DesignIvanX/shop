@@ -4,11 +4,30 @@ import Rusia from "../source/static/flag/rusia.png";
 import EEUU from "../source/static/flag/eeuu.png";
 import { TiTick } from "react-icons/ti";
 import Faq from "../components/Faq";
+import Benefits from "../components/Benefits";
 import { IoIosArrowDown } from "react-icons/io";
 import "./style/Product.css";
 const Product = ({ data }) => {
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
   const [img, setImg] = useState("");
+  const [price, setPrice] = useState({
+    Us: "",
+    UsDiscount: "",
+    Usporcentage: "",
+    shippingUS: "",
+  });
+  const handleOnChangeSelectedSize = (e, product) => {
+    const size = product.img[0].size.find(
+      (size) => size.size === e.target.value
+    );
+    setPrice({
+      size: size.size,
+      Us: size.Us,
+      UsDiscount: size.UsDiscount,
+      Usporcentage: size.Usporcentage,
+      shippingUS: size.shippingUS,
+    });
+  };
   const handleOnChangeSelected = (product, color, type) => {
     getColorImg(product, color.target.value, type);
   };
@@ -24,6 +43,9 @@ const Product = ({ data }) => {
       image = product.img[0].color.find((img) => img.color === color);
     }
     setImg(image.img);
+    if (type === "color" && price.size === undefined) {
+      setPrice(image.price[0].US);
+    }
   };
   const handleOnClickQuantity = (operation) => {
     let accountant = quantity;
@@ -33,15 +55,15 @@ const Product = ({ data }) => {
       setQuantity(accountant);
     } else {
       accountant = quantity - 1;
-      if (quantity === 0) {
-        accountant = 0;
+      if (quantity === 1) {
+        accountant = 1;
       }
       setQuantity(accountant);
     }
   };
   useEffect(() => {
-    getColorImg(data[0], "blue", "color");
-  }, []);
+    getColorImg(data[0], data[0].img[0].color[0].color, "color");
+  }, [data]);
   return (
     <div className="Product">
       <div id="top" className="Product__route">
@@ -98,28 +120,51 @@ const Product = ({ data }) => {
                   </a>
                   <div className="Product__content__one__text__one__price">
                     <h3 className="Product__content__one__text__one__price--h3-price">
-                      {product.price[0].US.Us}
+                      ${price.Us}
                     </h3>
                     <span className="Product__content__one__text__one__price--span-discount">
-                      {product.price[0].US.UsDiscount}
+                      ${price.UsDiscount}
                     </span>
                     <span className="Product__content__one__text__one__price--span-porcentage">
-                      {product.price[0].US.Usporcentage}
+                      {price.Usporcentage}%
                     </span>
                   </div>
                 </div>
                 <div className="Product__content__one__text__two">
                   <form className="Product__content__one__text__two__form">
-                    <select
-                      onChange={(color) =>
-                        handleOnChangeSelected(product, color, "color")
-                      }
-                    >
-                      <option value="blue">blue</option>
-                      <option value="yellow">yellow</option>
-                      <option value="green">green</option>
-                      <option value="pink">Pink</option>
-                    </select>
+                    {product.img[0].img.length !== 0 ? (
+                      <select
+                        onChange={(color) =>
+                          handleOnChangeSelected(product, color, "color")
+                        }
+                      >
+                        {product.img[0].color.map((img) => {
+                          return (
+                            <option key={img.color} value={img.color}>
+                              {img.color}
+                            </option>
+                          );
+                        })}
+                      </select>
+                    ) : (
+                      false
+                    )}
+
+                    {product.img[0].size.length !== 0 ? (
+                      <select
+                        onChange={(e) => handleOnChangeSelectedSize(e, product)}
+                      >
+                        {product.img[0].size.map((size) => {
+                          return (
+                            <option key={size.size} value={size.price}>
+                              {size.size}
+                            </option>
+                          );
+                        })}
+                      </select>
+                    ) : (
+                      false
+                    )}
                   </form>
                   <div className="Product__content__one__text__two__quantity">
                     <p className="Product__content__one__text__two__quantity--p">
@@ -149,9 +194,9 @@ const Product = ({ data }) => {
                   <button className="Product__content__one__text__three--btn">
                     ADD TO CART
                   </button>
-                  <p>{product.price[0].US.shippingUS} Shipping</p>
+                  <p>${price.shippingUS} Shipping</p>
                   <Countdown
-                    remainingSeconds="Wed Jan 2 2022 17:08:47 GMT+0100"
+                    remainingSeconds="Wed Jan 8 2022 18:06:00 GMT+0100"
                     finalMessage="finish"
                   />
                 </div>
@@ -165,47 +210,72 @@ const Product = ({ data }) => {
                     className="Product__content__details__box"
                     key={productDetail}
                   >
+                    {productDetail.benefits.length !== 0 ? (
+                      <div className="Product__content__details__box__hidden">
+                        <div className="Product__content__details__box__hidden__title">
+                          <h2 className="Product__content__details__box__hidden__title--h2">
+                            Benefits of {product.name}
+                          </h2>
+                          <IoIosArrowDown className="Product__content__details__box__hidden__title--arrow" />
+                        </div>
+                        {productDetail.benefits.map((benefit) => {
+                          return (
+                            <div
+                              className="Product__content__details__box__hidden__description"
+                              key={benefit}
+                            >
+                              <TiTick className="Product__content__details__box__hidden__description--tick" />
+                              <li className="Product__content__details__box__hidden__description--li">
+                                {benefit}
+                              </li>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    ) : (
+                      <div></div>
+                    )}
+                    {productDetail.details.length !== 0 ? (
+                      <div className="Product__content__details__box__hidden">
+                        <div className="Product__content__details__box__hidden__title">
+                          <h2 className="Product__content__details__box__hidden__title--h2">
+                            Details of {product.name}
+                          </h2>
+                          <IoIosArrowDown className="Product__content__details__box__hidden__title--arrow" />
+                        </div>
+                        {productDetail.details.map((detail) => {
+                          return (
+                            <div
+                              className="Product__content__details__box__hidden__description"
+                              key={detail}
+                            >
+                              <TiTick className="Product__content__details__box__hidden__description--tick" />
+                              <li className="Product__content__details__box__hidden__description--li">
+                                {detail}
+                              </li>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    ) : (
+                      <div></div>
+                    )}
                     <div className="Product__content__details__box__hidden">
                       <div className="Product__content__details__box__hidden__title">
                         <h2 className="Product__content__details__box__hidden__title--h2">
-                          Benefits of {product.name}
+                          Description of {product.name}
                         </h2>
                         <IoIosArrowDown className="Product__content__details__box__hidden__title--arrow" />
                       </div>
-                      {productDetail.benefits.map((benefit) => {
-                        return (
-                          <div
-                            className="Product__content__details__box__hidden__description"
-                            key={benefit}
-                          >
-                            <TiTick className="Product__content__details__box__hidden__description--tick" />
-                            <li className="Product__content__details__box__hidden__description--li">
-                              {benefit}
-                            </li>
-                          </div>
-                        );
-                      })}
-                    </div>
-                    <div className="Product__content__details__box__hidden">
-                      <div className="Product__content__details__box__hidden__title">
-                        <h2 className="Product__content__details__box__hidden__title--h2">
-                          Details of {product.name}
-                        </h2>
-                        <IoIosArrowDown className="Product__content__details__box__hidden__title--arrow" />
+
+                      <div
+                        className="Product__content__details__box__hidden__description"
+                        key={productDetail.description}
+                      >
+                        <li className="Product__content__details__box__hidden__description--li">
+                          {productDetail.description}
+                        </li>
                       </div>
-                      {productDetail.details.map((detail) => {
-                        return (
-                          <div
-                            className="Product__content__details__box__hidden__description"
-                            key={detail}
-                          >
-                            <TiTick className="Product__content__details__box__hidden__description--tick" />
-                            <li className="Product__content__details__box__hidden__description--li">
-                              {detail}
-                            </li>
-                          </div>
-                        );
-                      })}
                     </div>
                     <div className="Product__content__details__box__img">
                       {productDetail.img.map((img) => {
@@ -219,22 +289,22 @@ const Product = ({ data }) => {
                         );
                       })}
                     </div>
-                    <div className="Product__content__details__box__up">
-                      <a
-                        className="Product__content__details__box__up--a"
-                        href="#top"
-                      >
-                        Go up!!
-                      </a>
-                    </div>
                   </div>
                 );
               })}
             </div>
-            {/*  */}
-            <div className="Product__content__video">
-              <video src={product.video} controls></video>
-            </div>
+            {/* VIDEO */}
+            {product.video !== false ? (
+              <div className="Product__content__video">
+                <video
+                  src={product.video}
+                  controls
+                  className="Product__content__video--video"
+                ></video>
+              </div>
+            ) : (
+              <div></div>
+            )}
             <div className="Product__content__reviews">
               <div className="Product__content__reviews__one">
                 <div className="Product__content__reviews__one__text">
@@ -276,11 +346,10 @@ const Product = ({ data }) => {
                   </div>
                 </div>
               </div>
-              <div className="Product__content__reviews__two">
+              <div id="reviews" className="Product__content__reviews__two">
                 {product.reviews.map((review) => {
                   return (
                     <div
-                      id="reviews"
                       className="Product__content__reviews__two__content"
                       key={review.name}
                     >
@@ -316,7 +385,7 @@ const Product = ({ data }) => {
                             <img
                               src={img}
                               alt=""
-                              className="Product__content__reviews__two__content__img"
+                              className="Product__content__reviews__two__content__img--img"
                             />
                           );
                         })}
@@ -332,6 +401,7 @@ const Product = ({ data }) => {
               </div>
             </div>
             <Faq data={product.faq} />
+            <Benefits />
           </div>
         );
       })}

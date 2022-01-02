@@ -8,6 +8,7 @@ import Checkout from "../pages/Checkout";
 import Information from "../pages/Information";
 import Payment from "../pages/Payment";
 import Success from "../pages/Success";
+import Collections from "../pages/Collections";
 const App = () => {
   return (
     <Canva>
@@ -19,6 +20,7 @@ const App = () => {
         <Information path="/checkout/information" />
         <Payment path="/checkout/payment" />
         <Success path="/checkout/success" />
+        <Collections path="/collections/all" />
       </Router>
     </Canva>
   );
