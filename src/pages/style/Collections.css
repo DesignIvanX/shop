@@ -21,7 +21,7 @@
 .Collection__all__box {
   position: relative;
   width: 200px;
-  height: 330px;
+  height: auto;
   box-shadow: var(--shadow);
   margin: 20px 10px;
   text-align: center;

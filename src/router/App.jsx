@@ -9,6 +9,7 @@ import Information from "../pages/Information";
 import Payment from "../pages/Payment";
 import Success from "../pages/Success";
 import Collections from "../pages/Collections";
+import Contact from "../pages/Contact";
 const App = () => {
   return (
     <Canva>
@@ -21,6 +22,7 @@ const App = () => {
         <Payment path="/checkout/payment" />
         <Success path="/checkout/success" />
         <Collections path="/collections/all" />
+        <Contact path="/contact" />
       </Router>
     </Canva>
   );
