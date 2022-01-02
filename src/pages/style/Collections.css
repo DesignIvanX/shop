@@ -20,8 +20,8 @@
 }
 .Collection__all__box {
   position: relative;
-  min-width: 230px;
-  max-width: 230px;
+  min-width: 250px;
+  max-width: 250px;
   height: auto;
   box-shadow: var(--shadow);
   margin: 20px 10px;
@@ -30,22 +30,22 @@
   padding: 0 0 20px 0;
 }
 .Collection__all__box__img {
-  width: 230px;
-  height: 230px;
+  width: 250px;
+  height: 250px;
   margin: 0 auto;
   overflow: hidden;
 }
 .Collection__all__img--img {
-  width: 230px;
-  height: 230px;
+  width: 250px;
+  height: 250px;
 }
 .Collection__all__img--img--hidden {
   position: absolute;
   top: 0;
   left: 0;
   transform: scale(0);
-  width: 230px;
-  height: 230px;
+  width: 250px;
+  height: 250px;
   transition: 500ms all;
 }
 .Collection__all__box:hover .Collection__all__img--img--hidden {
