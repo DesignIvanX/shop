@@ -1,5 +1,5 @@
 import React from "react";
-
+import Loader from "../components/Loader.jsx";
 import useInitialState from "../hooks/useInitialState";
 
 const AppContext = React.createContext({});
@@ -14,7 +14,7 @@ export const AppContextProvider = ({ children }) => {
           {children}
         </AppContext.Provider>
       ) : (
-        <h1>Cargando...</h1>
+        <Loader />
       )}
     </>
   );

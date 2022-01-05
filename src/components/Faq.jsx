@@ -4,9 +4,7 @@ import "./style/Faq.css";
 const Faq = ({ data }) => {
   return (
     <div>
-      {data === undefined ? (
-        <div></div>
-      ) : (
+      {data !== undefined && (
         <div className="Faq">
           {data.map((faq) => {
             return (

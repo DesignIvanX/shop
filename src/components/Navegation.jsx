@@ -1,10 +1,12 @@
-import React from "react";
-import { Link } from "@reach/router";
+import React, { useContext } from "react";
+import AppContext from "../context/AppContext";
 import { HiShoppingCart } from "react-icons/hi";
 import { GrFormClose } from "react-icons/gr";
 import Logo from "../source/static/merch/logo.png";
 import "./style/Navegation.css";
 const Navegation = () => {
+  const { state, addToCart, removeToCart, sumTotal } = useContext(AppContext);
+  const { cart } = state;
   const handleOnClickCart = () => {
     const cart = document.querySelector(".Navegation__content__card__two");
     if (!cart.classList.contains("toggleCart")) {
@@ -13,6 +15,7 @@ const Navegation = () => {
     }
     cart.classList.remove("toggleCart");
   };
+  console.log(cart);
   const handleOnClickHamburger = () => {
     const nav = document.querySelector(
       ".Navegation__content__menu__content__nav"
@@ -25,6 +28,15 @@ const Navegation = () => {
     }
     nav.classList.remove("toggle");
     burger.classList.remove("active");
+  };
+  const handleRemoveToCart = (item) => () => {
+    removeToCart(item.id);
+  };
+  const handleAddToCart = (item) => () => {
+    addToCart(item);
+  };
+  const handleSumTotal = () => {
+    return sumTotal(cart);
   };
   return (
     <div className="Navegation">
@@ -42,33 +54,33 @@ const Navegation = () => {
             <nav className="Navegation__content__menu__content__nav">
               <ul className="Navegation__content__menu__content__nav__ul">
                 <li className="Navegation__content__menu__content__nav__ul__li">
-                  <Link to="/collections/all">SHOP</Link>
+                  <a href="/collections/all">SHOP</a>
                 </li>
                 <li className="Navegation__content__menu__content__nav__ul__li">
-                  <Link to="/">Best sellers</Link>
+                  <a href="/">Best sellers</a>
                 </li>
                 <li className="Navegation__content__menu__content__nav__ul__li">
-                  <Link to="product/Scalibor Antiparasitic Collar">
+                  <a href="product/Scalibor Antiparasitic Collar">
                     Dog supplies
-                  </Link>
+                  </a>
                 </li>
                 <li className="Navegation__content__menu__content__nav__ul__li">
-                  <Link to="product/Dog Craft">Dog accessories</Link>
+                  <a href="product/Dog Craft">Dog accessories</a>
                 </li>
                 <li className="Navegation__content__menu__content__nav__ul__li">
-                  <Link to="product/Mini GPS Dogs">Food for dogs</Link>
+                  <a href="product/Mini GPS Dogs">Food for dogs</a>
                 </li>
                 <li className="Navegation__content__menu__content__nav__ul__li">
-                  <Link to="product/Portable Water Bottle">Clear dog</Link>
+                  <a href="product/Portable Water Bottle">Clear dog</a>
                 </li>
               </ul>
             </nav>
           </div>
         </div>
         <div className="Navegation__content__logo">
-          <Link to="/">
+          <a href="/">
             <img src={Logo} alt="logo de the dog merch" />
-          </Link>
+          </a>
         </div>
         <div className="Navegation__content__card">
           <div
@@ -76,6 +88,13 @@ const Navegation = () => {
             onClick={handleOnClickCart}
           >
             <HiShoppingCart className="Navegation__content__card__one--icon" />
+            {state.cart.length !== 0 ? (
+              <span className="Navegation__content__card__one--span">
+                {state.cart.length}
+              </span>
+            ) : (
+              <span></span>
+            )}
           </div>
           <div className="Navegation__content__card__two">
             <div className="Navegation__content__card__two__one">
@@ -91,19 +110,77 @@ const Navegation = () => {
                 </div>
               </div>
             </div>
-            <div className="Navegation__content__card__two__two"></div>
-            <div className="Navegation__content__card__two__three">
-              <div className="Navegation__content__card__two__three__one">
-                <h3>Subtotal</h3>
-                <span>US $0</span>
+            {cart.length !== 0 ? (
+              <div>
+                <div className="Navegation__content__card__two__two">
+                  {cart.map((item) => {
+                    return (
+                      <div
+                        key={item.name}
+                        className="Navegation__content__card__two__two__product"
+                      >
+                        <a href={`/product/${item.name}`}>
+                          <div className="Navegation__content__card__two__two__product__img">
+                            <img
+                              className="Navegation__content__card__two__two__product__img--img"
+                              src={item.presentation[0].img}
+                              alt={item.name}
+                            />
+                          </div>
+                        </a>
+                        <div className="Navegation__content__card__two__two__product__information">
+                          <div className="Navegation__content__card__two__two__product__information__one">
+                            <a href={`/product/${item.name}`}>
+                              <h3 className="Navegation__content__card__two__two__product__information__one--h3">
+                                {item.name}
+                              </h3>
+                            </a>
+                          </div>
+                          <div className="Navegation__content__card__two__two__product__information__two">
+                            <div className="Navegation__content__card__two__two__product__information__two__quantity">
+                              <button
+                                onClick={handleRemoveToCart(item)}
+                                className="Navegation__content__card__two__two__product__information__two__quantity--res"
+                              >
+                                -
+                              </button>
+                              <span className="Navegation__content__card__two__two__product__information__two__quantity--span">
+                                {item.quantity}
+                              </span>
+                              <button
+                                onClick={handleAddToCart(item)}
+                                className="Navegation__content__card__two__two__product__information__two__quantity--sum"
+                              >
+                                +
+                              </button>
+                            </div>
+                            <div className="Navegation__content__card__two__two__product__information__two__price">
+                              <h3 className="Navegation__content__card__two__two__product__information__two__price--h3">
+                                ${item.price[0].US.Us}
+                              </h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="Navegation__content__card__two__three">
+                  <div className="Navegation__content__card__two__three__one">
+                    <h3>Subtotal</h3>
+                    <span>US ${handleSumTotal()}</span>
+                  </div>
+                  <div className="Navegation__content__card__two__three__two">
+                    <a href="/checkout">PROCEED TO CHECKOUT</a>
+                  </div>
+                  <div className="Navegation__content__card__two__three__three">
+                    <p>Shpping & taxes calculated at checkout</p>
+                  </div>
+                </div>
               </div>
-              <div className="Navegation__content__card__two__three__two">
-                <Link to="/checkout">PROCEED TO CHECKOUT</Link>
-              </div>
-              <div className="Navegation__content__card__two__three__three">
-                <p>Shpping & taxes calculated at checkout</p>
-              </div>
-            </div>
+            ) : (
+              <h3 className="isEmpty">Your cart is currently empty.</h3>
+            )}
           </div>
         </div>
       </div>

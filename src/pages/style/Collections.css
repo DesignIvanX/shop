@@ -1,16 +1,15 @@
 .Collection {
   min-width: 320px;
   width: 100%;
-  margin: 125px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 0 0;
 }
-.Collection__title {
-  margin: 0 auto;
-  text-align: center;
-}
-.Collection__title--h1 {
-  color: var(--blackDark);
+.Collection--h1 {
+  color: var(--black);
   font-size: 2rem;
   margin: 0;
+  text-align: center;
 }
 .Collection__all {
   display: flex;

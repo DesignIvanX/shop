@@ -1,5 +1,5 @@
 .Navegation {
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   box-shadow: var(--shadowColor);
@@ -81,6 +81,15 @@
   cursor: pointer;
   font-size: 2rem;
 }
+.Navegation__content__card__one--span {
+  position: absolute;
+  top: 25px;
+  right: 13px;
+  background-color: var(--one);
+  padding: 2px 9px;
+  border-radius: 100%;
+  color: var(--white);
+}
 .Navegation__content__card__two {
   position: fixed;
   top: 0;
@@ -99,6 +108,7 @@
   font-size: 0.9rem;
   text-align: center;
   color: var(--blackDark);
+  font-weight: bold;
 }
 .Navegation__content__card__two__one__content__x {
   position: absolute;
@@ -148,4 +158,78 @@
 }
 .toggleCart {
   transform: translateX(0%) !important;
+}
+.Navegation__content__card__two__two {
+  overflow-y: scroll;
+  height: 65vh;
+}
+.Navegation__content__card__two__two__product {
+  display: block;
+  max-width: 320px;
+  height: auto;
+  margin: 10px 20px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 2px dashed var(--four);
+}
+.Navegation__content__card__two__two__product__img {
+}
+.Navegation__content__card__two__two__product__img--img {
+  width: 90px;
+  height: 90px;
+}
+.Navegation__content__card__two__two__product__information {
+}
+.Navegation__content__card__two__two__product__information__one {
+}
+.Navegation__content__card__two__two__product__information__one--h3 {
+  color: var(--blackDark);
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin: 5px 0 0 10px;
+}
+.Navegation__content__card__two__two__product__information__two {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.Navegation__content__card__two__two__product__information__two__quantity {
+}
+.Navegation__content__card__two__two__product__information__two__quantity--res {
+  margin: 0 10px 0 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: var(--four);
+  color: var(--white);
+  border: none;
+}
+.Navegation__content__card__two__two__product__information__two__quantity--span {
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: normal;
+}
+.Navegation__content__card__two__two__product__information__two__quantity--sum {
+  margin: 0 0 0 10px;
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: var(--four);
+  color: var(--white);
+  border: none;
+}
+.Navegation__content__card__two__two__product__information__two__price {
+}
+.Navegation__content__card__two__two__product__information__two__price--h3 {
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+.isEmpty {
+  font-size: 1.26rem;
+  margin: 20px 20px;
+  color: var(--blackDark);
+  font-weight: bold;
 }

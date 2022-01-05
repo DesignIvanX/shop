@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --one: #ffffff;
   --two: #3e3f41;
   --three: #eeeeee;
@@ -20,7 +20,7 @@
   --fontTwo: "Quicksand", sans-serif;
   --shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
   --shadowTwo: 0 0 10px #cccccc;
-}
+} */
 :root {
   --one: #ffafaf;
   --two: #fffcdc;
@@ -56,9 +56,9 @@ a {
 }
 hr {
   clear: both;
-  border-top: 2px solid var(--four);
+  border-top: solid var(--four);
   border-top-width: medium;
-  border-width: 2px 0 0;
+  border-width: 3px 0 0;
   height: 0;
   max-width: 90px;
   margin: 10px auto;

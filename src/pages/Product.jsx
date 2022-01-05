@@ -7,7 +7,7 @@ import Faq from "../components/Faq";
 import Benefits from "../components/Benefits";
 import { IoIosArrowDown } from "react-icons/io";
 import "./style/Product.css";
-const Product = ({ data }) => {
+const Product = ({ data, handleAddToCart }) => {
   const [quantity, setQuantity] = useState(1);
   const [img, setImg] = useState("");
   const [price, setPrice] = useState({
@@ -63,7 +63,7 @@ const Product = ({ data }) => {
   };
   useEffect(() => {
     getColorImg(data[0], data[0].img[0].color[0].color, "color");
-  }, [data]);
+  }, []);
   return (
     <div className="Product">
       <div id="top" className="Product__route">
@@ -150,7 +150,7 @@ const Product = ({ data }) => {
                       false
                     )}
 
-                    {product.img[0].size.length !== 0 ? (
+                    {product.img[0].size.length !== 0 && (
                       <select
                         onChange={(e) => handleOnChangeSelectedSize(e, product)}
                       >
@@ -162,8 +162,6 @@ const Product = ({ data }) => {
                           );
                         })}
                       </select>
-                    ) : (
-                      false
                     )}
                   </form>
                   <div className="Product__content__one__text__two__quantity">
@@ -191,7 +189,10 @@ const Product = ({ data }) => {
                   </div>
                 </div>
                 <div className="Product__content__one__text__three">
-                  <button className="Product__content__one__text__three--btn">
+                  <button
+                    onClick={handleAddToCart(product, quantity)}
+                    className="Product__content__one__text__three--btn"
+                  >
                     ADD TO CART
                   </button>
                   <p>${price.shippingUS} Shipping</p>
@@ -210,7 +211,7 @@ const Product = ({ data }) => {
                     className="Product__content__details__box"
                     key={productDetail}
                   >
-                    {productDetail.benefits.length !== 0 ? (
+                    {productDetail.benefits.length !== 0 && (
                       <div className="Product__content__details__box__hidden">
                         <div className="Product__content__details__box__hidden__title">
                           <h2 className="Product__content__details__box__hidden__title--h2">
@@ -232,10 +233,8 @@ const Product = ({ data }) => {
                           );
                         })}
                       </div>
-                    ) : (
-                      <div></div>
                     )}
-                    {productDetail.details.length !== 0 ? (
+                    {productDetail.details.length !== 0 && (
                       <div className="Product__content__details__box__hidden">
                         <div className="Product__content__details__box__hidden__title">
                           <h2 className="Product__content__details__box__hidden__title--h2">
@@ -257,8 +256,6 @@ const Product = ({ data }) => {
                           );
                         })}
                       </div>
-                    ) : (
-                      <div></div>
                     )}
                     <div className="Product__content__details__box__hidden">
                       <div className="Product__content__details__box__hidden__title">
@@ -294,7 +291,7 @@ const Product = ({ data }) => {
               })}
             </div>
             {/* VIDEO */}
-            {product.video !== false ? (
+            {product.video !== false && (
               <div className="Product__content__video">
                 <video
                   src={product.video}
@@ -302,8 +299,6 @@ const Product = ({ data }) => {
                   className="Product__content__video--video"
                 ></video>
               </div>
-            ) : (
-              <div></div>
             )}
             <div className="Product__content__reviews">
               <div className="Product__content__reviews__one">

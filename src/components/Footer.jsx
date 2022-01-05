@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "@reach/router";
 import {
   FaCcVisa,
   FaCcMastercard,
@@ -16,27 +15,26 @@ const Footer = () => {
         <div className="Footer__content__others">
           <div className="Footer__content__others__one">
             <h3>Contact</h3>
-            <Link to="/">+595 992 233418</Link>
-            <Link to="/">support@thedogmerch.com</Link>
-            <Link to="/">Sunshine Ecommerce Technologies LLC</Link>
-            <Link to="/">6 Jenner Suite 260 Irvine CA, 92618</Link>
+            <a href="/">+595 992 233418</a>
+            <a href="/">support@thedogmerch.com</a>
+            <a href="/">Sunshine Ecommerce Technologies LLC</a>
+            <a href="/">6 Jenner Suite 260 Irvine CA, 92618</a>
           </div>
           <div className="Footer__content__others__two">
             <h3>Company info</h3>
-            <Link to="/">About us</Link>
-            <Link to="/">Privacy</Link>
-            <Link to="/">Policy Terms and Conditions</Link>
-            <Link to="/">Contact Us</Link>
-            <Link to="/">COVID-19 UPDATE</Link>
+            <a href="/">About us</a>
+            <a href="/">Privacy</a>
+            <a href="/">Policy Terms and Conditions</a>
+            <a href="/">Contact Us</a>
+            <a href="/">COVID-19 UPDATE</a>
           </div>
           <div className="Footer__content__others__three">
             <h3>Purchase info</h3>
-            <Link to="/">Frequently Asked Questions</Link>
-            <Link to="/">Payment methods</Link>
-            <Link to="/">Shipping & Delivery</Link>
-            <Link to="/">Returns Policy</Link>
-            <Link to="/">Tracking</Link>
-            <Link to="/"></Link>
+            <a href="/">Frequently Asked Questions</a>
+            <a href="/">Payment methods</a>
+            <a href="/">Shipping & Delivery</a>
+            <a href="/">Returns Policy</a>
+            <a href="/">Tracking</a>
           </div>
         </div>
         <div className="Footer__content__social">

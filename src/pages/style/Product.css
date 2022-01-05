@@ -1,7 +1,7 @@
 .Product {
   min-width: 320px;
-  margin: 125px 0 0 0;
   height: auto;
+  margin: 25px 0 0 0;
 }
 .Product__route a {
   display: inline-block;
@@ -87,7 +87,7 @@
 }
 .Product__content__one__text__one__price--span-porcentage {
   color: var(--white);
-  background-color: var(--sixteen);
+  background-color: var(--eigth);
   padding: 5px;
   margin: 0 10px;
 }
