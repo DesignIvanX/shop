@@ -10,23 +10,31 @@ import "./style/Product.css";
 const Product = ({ data, handleAddToCart }) => {
   const [quantity, setQuantity] = useState(1);
   const [img, setImg] = useState("");
+  const [color, setColor] = useState("");
   const [price, setPrice] = useState({
+    imgModel: "",
+    size: data[0].img[0].size === true ? data[0].img[0].size : undefined,
+    color: "",
     Us: "",
     UsDiscount: "",
     Usporcentage: "",
     shippingUS: "",
+    quantity: quantity,
   });
   const handleOnChangeSelectedSize = (e, product) => {
     const size = product.img[0].size.find(
       (size) => size.size === e.target.value
     );
-    setPrice({
-      size: size.size,
-      Us: size.Us,
-      UsDiscount: size.UsDiscount,
-      Usporcentage: size.Usporcentage,
-      shippingUS: size.shippingUS,
-    });
+    handleUpdatePrice(
+      img,
+      size.size,
+      color,
+      size.Us,
+      size.UsDiscount,
+      size.Usporcentage,
+      size.shippingUS,
+      quantity
+    );
   };
   const handleOnChangeSelected = (product, color, type) => {
     getColorImg(product, color.target.value, type);
@@ -43,13 +51,22 @@ const Product = ({ data, handleAddToCart }) => {
       image = product.img[0].color.find((img) => img.color === color);
     }
     setImg(image.img);
-    if (type === "color" && price.size === undefined) {
-      setPrice(image.price[0].US);
+    setColor(color);
+    if (type === "color") {
+      handleUpdatePrice(
+        image.img,
+        price.size,
+        color,
+        image.price[0].US.Us,
+        image.price[0].US.UsDiscount,
+        image.price[0].US.Usporcentage,
+        image.price[0].US.shippingUS,
+        quantity
+      );
     }
   };
   const handleOnClickQuantity = (operation) => {
     let accountant = quantity;
-
     if (operation === "+") {
       accountant = quantity + 1;
       setQuantity(accountant);
@@ -60,6 +77,27 @@ const Product = ({ data, handleAddToCart }) => {
       }
       setQuantity(accountant);
     }
+  };
+  const handleUpdatePrice = (
+    imgModel,
+    size,
+    color,
+    Us,
+    UsDiscount,
+    Usporcentage,
+    shippingUS,
+    quantity
+  ) => {
+    setPrice({
+      imgModel: imgModel,
+      size: size,
+      color: color,
+      Us: Us,
+      UsDiscount: UsDiscount,
+      Usporcentage: Usporcentage,
+      shippingUS: shippingUS,
+      quantity: quantity,
+    });
   };
   useEffect(() => {
     getColorImg(data[0], data[0].img[0].color[0].color, "color");
@@ -190,7 +228,7 @@ const Product = ({ data, handleAddToCart }) => {
                 </div>
                 <div className="Product__content__one__text__three">
                   <button
-                    onClick={handleAddToCart(product, quantity)}
+                    onClick={handleAddToCart(product, price, quantity)}
                     className="Product__content__one__text__three--btn"
                   >
                     ADD TO CART

@@ -123,7 +123,7 @@ const Navegation = () => {
                           <div className="Navegation__content__card__two__two__product__img">
                             <img
                               className="Navegation__content__card__two__two__product__img--img"
-                              src={item.presentation[0].img}
+                              src={item.informationModel.imgModel}
                               alt={item.name}
                             />
                           </div>
@@ -135,6 +135,18 @@ const Navegation = () => {
                                 {item.name}
                               </h3>
                             </a>
+                            <div className="Navegation__content__card__two__two__product__information__one__details">
+                              {item.informationModel.color && (
+                                <span className="Navegation__content__card__two__two__product__information__one__details--span">
+                                  {item.informationModel.color}
+                                </span>
+                              )}
+                              {item.informationModel.size && (
+                                <span className="__details--span">
+                                  {item.informationModel.size}
+                                </span>
+                              )}
+                            </div>
                           </div>
                           <div className="Navegation__content__card__two__two__product__information__two">
                             <div className="Navegation__content__card__two__two__product__information__two__quantity">
@@ -145,7 +157,7 @@ const Navegation = () => {
                                 -
                               </button>
                               <span className="Navegation__content__card__two__two__product__information__two__quantity--span">
-                                {item.quantity}
+                                {item.informationModel.quantity}
                               </span>
                               <button
                                 onClick={handleAddToCart(item)}
@@ -156,7 +168,7 @@ const Navegation = () => {
                             </div>
                             <div className="Navegation__content__card__two__two__product__information__two__price">
                               <h3 className="Navegation__content__card__two__two__product__information__two__price--h3">
-                                ${item.price[0].US.Us}
+                                ${item.informationModel.Us}
                               </h3>
                             </div>
                           </div>

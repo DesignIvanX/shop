@@ -19,8 +19,8 @@ const Details = ({ id }) => {
     };
     data();
   }, [products, id]);
-  const handleAddToCart = (product, quantity) => () => {
-    addToCart(product);
+  const handleAddToCart = (product, price, quantity) => () => {
+    addToCart(product, price, quantity);
     const cart = document.querySelector(".Navegation__content__card__two");
     if (!cart.classList.contains("toggleCart")) {
       cart.classList.add("toggleCart");

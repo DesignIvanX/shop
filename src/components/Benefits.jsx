@@ -1,11 +1,12 @@
 import React from "react";
-import { RiTruckFill, RiChat1Line } from "react-icons/ri";
-import { AiOutlineFileDone } from "react-icons/ai";
+// import { RiTruckFill, RiChat1Line } from "react-icons/ri";
+// import { AiOutlineFileDone } from "react-icons/ai";
+import benefits from "../source/static/merch/shipping.webp";
 import "./style/Benefit.css";
 const Benefits = () => {
   return (
     <div className="Benefit">
-      <div className="Benefit__one">
+      {/* <div className="Benefit__one">
         <h2 className="Benefit__one--h2">
           <RiTruckFill className="Benefit__one--h2--icon" />
           FREE DELIVERIES FROM $ 30
@@ -27,7 +28,13 @@ const Benefits = () => {
           PAYMENT AGAINST REFUNDS
         </h2>
         <h3 className="Benefit__three--h3">Worry-free shopping</h3>
-      </div>
+      </div> */}
+      <img
+        src={benefits}
+        alt="benefits"
+        title="benefits"
+        className="benefits"
+      />
     </div>
   );
 };

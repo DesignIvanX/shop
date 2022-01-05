@@ -11,7 +11,7 @@
   justify-content: space-evenly;
   flex-direction: column;
   flex-wrap: wrap;
-  background-color: var(--blackDark);
+  background-color: var(--one);
 }
 .Footer__content__others {
   display: flex;

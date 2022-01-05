@@ -2,10 +2,11 @@ import { useState } from "react";
 import initialState from "../API/products.json";
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
-  const addToCart = (payload) => {
+  const addToCart = (payload, price, quantity) => {
+    console.log(price);
     setState({
       ...state,
-      cart: [...state.cart, payload],
+      cart: [...state.cart, { ...payload, informationModel: price }],
     });
   };
   const removeToCart = (payload) => {

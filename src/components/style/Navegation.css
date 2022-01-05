@@ -189,6 +189,15 @@
   font-size: 1.4rem;
   margin: 5px 0 0 10px;
 }
+.Navegation__content__card__two__two__product__information__one__details {
+  color: var(--black);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+.Navegation__content__card__two__two__product__information__one__details--span {
+  margin: 0 10px;
+}
 .Navegation__content__card__two__two__product__information__two {
   width: 100%;
   display: flex;

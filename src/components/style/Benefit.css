@@ -1,4 +1,4 @@
-.Benefit {
+/* .Benefit {
   min-width: 320px;
   width: 100%;
   background-color: var(--blackDark);
@@ -34,4 +34,12 @@
   font-weight: lighter;
   font-size: 0.9rem;
   margin-top: -10px;
+} */
+
+.Benefit {
+  margin: 0 auto 30px auto;
+}
+.benefits {
+  max-width: 600px;
+  min-width: 300px;
 }
