@@ -1,7 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import { navigate } from "@reach/router";
 import AppContext from "../context/AppContext";
-import pass from "../pass";
 import { PayPalButton } from "react-paypal-button-v2";
 import { MdArrowForwardIos } from "react-icons/md";
 import { FaCcVisa, FaCcMastercard, FaCcPaypal } from "react-icons/fa";
@@ -11,7 +10,8 @@ const Checkout = () => {
   const { addNewOrder, state, sumTotal } = useContext(AppContext);
   const { cart } = state;
   const paypalOptions = {
-    clientId: pass.paypalPaymentClientID,
+    clientId:
+      "ASzOhz0WUtg-Fn_5e6PV-RLPl03W897vL15ir6YyoHt9tWlAhwzCLiq7EaGnTyelxTFF3ot62XF7Yn45",
     intent: "capture",
     currency: "USD",
   };
