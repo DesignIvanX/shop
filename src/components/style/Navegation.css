@@ -166,9 +166,9 @@
 .Navegation__content__card__two__two__product {
   display: block;
   max-width: 320px;
-  min-width: 280px;
+  min-width: 300px;
   height: auto;
-  margin: 10px 20px;
+  margin: 10px 10px;
   display: flex;
   align-items: center;
   padding-bottom: 5px;
