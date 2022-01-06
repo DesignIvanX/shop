@@ -135,10 +135,9 @@
   justify-content: space-evenly;
 }
 .Navegation__content__card__two__three__two a {
-  width: 100%;
   border: none;
   background-color: var(--four);
-  padding: 10px 25px;
+  padding: 10px 15px;
   color: var(--white);
   box-shadow: var(--shadow);
   font-size: 1.3rem;

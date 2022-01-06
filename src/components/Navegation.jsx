@@ -3,6 +3,7 @@ import AppContext from "../context/AppContext";
 import { HiShoppingCart } from "react-icons/hi";
 import { GrFormClose } from "react-icons/gr";
 import Logo from "../source/static/merch/logo.png";
+import { Link } from "@reach/router";
 import "./style/Navegation.css";
 const Navegation = () => {
   const { state, addToCart, removeToCart, sumTotal } = useContext(AppContext);
@@ -142,7 +143,7 @@ const Navegation = () => {
                                 </span>
                               )}
                               {item.informationModel.size && (
-                                <span className="__details--span">
+                                <span className="Navegation__content__card__two__two__product__information__one__details--span">
                                   {item.informationModel.size}
                                 </span>
                               )}
@@ -183,7 +184,7 @@ const Navegation = () => {
                     <span>US ${handleSumTotal()}</span>
                   </div>
                   <div className="Navegation__content__card__two__three__two">
-                    <a href="/checkout">PROCEED TO CHECKOUT</a>
+                    <Link to="/checkout">PROCEED TO CHECKOUT</Link>
                   </div>
                   <div className="Navegation__content__card__two__three__three">
                     <p>Shpping & taxes calculated at checkout</p>
