@@ -95,6 +95,7 @@
   top: 0;
   right: 0;
   min-width: 320px;
+  max-width: 320px;
   height: 100%;
   background-color: var(--white);
   transform: translateX(100%);
@@ -165,6 +166,7 @@
 .Navegation__content__card__two__two__product {
   display: block;
   max-width: 320px;
+  min-width: 280px;
   height: auto;
   margin: 10px 20px;
   display: flex;
