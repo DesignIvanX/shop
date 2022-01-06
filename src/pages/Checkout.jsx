@@ -10,8 +10,7 @@ const Checkout = () => {
   const { addNewOrder, state, sumTotal } = useContext(AppContext);
   const { cart } = state;
   const paypalOptions = {
-    clientId:
-      "ASzOhz0WUtg-Fn_5e6PV-RLPl03W897vL15ir6YyoHt9tWlAhwzCLiq7EaGnTyelxTFF3ot62XF7Yn45",
+    clientId: process.env.REACT_APP_CLIENT_ID_PP,
     intent: "capture",
     currency: "USD",
   };
