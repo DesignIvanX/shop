@@ -8,9 +8,10 @@ import { SiMastercard } from "react-icons/si";
 import "./style/Checkout.css";
 const Checkout = () => {
   const { addNewOrder, state, sumTotal } = useContext(AppContext);
+  const { REACT_APP_CLIENT_ID_PP } = process.env;
   const { cart } = state;
   const paypalOptions = {
-    clientId: process.env.REACT_APP_CLIENT_ID_PP,
+    clientId: String(REACT_APP_CLIENT_ID_PP),
     intent: "capture",
     currency: "USD",
   };

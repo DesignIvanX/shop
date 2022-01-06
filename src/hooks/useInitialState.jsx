@@ -3,7 +3,6 @@ import initialState from "../API/products.json";
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
   const addToCart = (payload, price, quantity) => {
-    console.log(price);
     setState({
       ...state,
       cart: [...state.cart, { ...payload, informationModel: price }],
@@ -22,7 +21,6 @@ const useInitialState = () => {
     });
   };
   const sumTotal = (payload) => {
-    console.log(payload);
     const reducer = (accumulator, currentValue) => {
       return accumulator + parseFloat(currentValue.informationModel.Us);
     };

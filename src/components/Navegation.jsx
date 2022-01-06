@@ -16,7 +16,6 @@ const Navegation = () => {
     }
     cart.classList.remove("toggleCart");
   };
-  console.log(cart);
   const handleOnClickHamburger = () => {
     const nav = document.querySelector(
       ".Navegation__content__menu__content__nav"
